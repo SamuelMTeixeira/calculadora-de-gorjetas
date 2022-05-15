@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgFundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gorjeta" />
+
+    <EditText
+        android:id="@+id/tfValor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:ems="10"
+        android:hint="Digite um valor. EX: 40.5"
+        android:inputType="textPersonName"
+        android:shadowColor="#DCDCDC"
+        android:textColor="@color/black"
+        android:textColorHint="#A8A8A8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgFundo" />
+
+    <TextView
+        android:id="@+id/txtPercent"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="0%"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarPercent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tfValor" />
+
+    <SeekBar
+        android:id="@+id/seekBarPercent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtPercent"
+        app:layout_constraintTop_toBottomOf="@+id/tfValor" />
+
+    <TextView
+        android:id="@+id/txtGorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Gorjeta"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPercent" />
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Total"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtResultadoTotal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResultadoGorjeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/laranjaClaro"
+        android:paddingStart="50px"
+        android:paddingTop="10px"
+        android:paddingEnd="10px"
+        android:paddingBottom="10px"
+        android:text="R$ 0"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtGorjeta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtGorjeta" />
+
+    <TextView
+        android:id="@+id/txtResultadoTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@color/laranjaClaro"
+        android:paddingStart="50px"
+        android:paddingTop="10px"
+        android:paddingEnd="10px"
+        android:paddingBottom="10px"
+        android:text="R$ 0"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTotal"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultadoGorjeta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
